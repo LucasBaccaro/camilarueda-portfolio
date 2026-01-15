@@ -127,13 +127,17 @@ export function Navigation({ language, onLanguageChange, onNavigate, currentSect
 
             <button
               onClick={() => {
-                onLanguageChange(language === 'es' ? 'en' : 'es');
+                const newLang = language === 'es' ? 'en' : 'es';
+                onLanguageChange(newLang);
+                // We keep it open for a moment so they see the change? 
+                // No, let's just change and close.
                 setIsMobileMenuOpen(false);
               }}
-              className="mt-8 flex items-center gap-3 text-white/50 text-xl font-light tracking-tight"
+              className="mt-8 flex items-center gap-3 text-white transition-colors"
+              style={{ fontSize: '18px', fontWeight: 400, letterSpacing: '0.02em' }}
             >
-              <Globe size={20} />
-              {language === 'es' ? 'English' : 'Español'}
+              <Globe size={18} className="text-[#b19ef5]" />
+              <span>{language === 'es' ? 'English' : 'Español'}</span>
             </button>
           </motion.div>
         )}
