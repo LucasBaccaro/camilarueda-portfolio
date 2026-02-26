@@ -73,7 +73,7 @@ export function Contact({ language }: ContactProps) {
               <span
                 className="tracking-tight"
                 style={{
-                  fontSize: 'clamp(18px, 2vw, 28px)',
+                  fontSize: 'clamp(13px, 1.4vw, 18px)',
                   fontWeight: 300,
                   letterSpacing: '-0.01em',
                 }}

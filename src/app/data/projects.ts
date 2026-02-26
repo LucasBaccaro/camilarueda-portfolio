@@ -36,6 +36,51 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'luca-studio',
+    title: {
+      es: 'Luca Studio',
+      en: 'Luca Studio',
+    },
+    category: {
+      es: 'Branding · UX/UI · Agencia Digital',
+      en: 'Branding · UX/UI · Digital Agency',
+    },
+    year: '',
+    imageUrl: '/luca-studio.jpg',
+    description: {
+      es: 'Diseño de identidad y experiencia digital para una agencia de soluciones digitales.',
+      en: 'Identity and digital experience design for a digital solutions agency.',
+    },
+    context: {
+      es: 'Luca Studio es una agencia de soluciones digitales que necesitaba una identidad visual sólida y una experiencia de usuario coherente para comunicar su propuesta de valor de forma clara y profesional.',
+      en: 'Luca Studio is a digital solutions agency that needed a strong visual identity and a coherent user experience to communicate their value proposition clearly and professionally.',
+    },
+    role: {
+      es: 'UX/UI Designer',
+      en: 'UX/UI Designer',
+    },
+    responsibilities: {
+      es: [
+        'Definición de identidad visual y branding',
+        'Diseño de experiencia y flujos de usuario',
+        'Diseño de interfaz web',
+        'Prototipado de alta fidelidad',
+      ],
+      en: [
+        'Visual identity and branding definition',
+        'User experience and flow design',
+        'Web interface design',
+        'High-fidelity prototyping',
+      ],
+    },
+    outcome: {
+      es: 'Una identidad digital coherente y una interfaz que refleja los valores de la agencia, mejorando su presencia online y la percepción de marca.',
+      en: 'A coherent digital identity and interface that reflects the agency\'s values, improving their online presence and brand perception.',
+    },
+    heroImageUrl: '/luca-studio.jpg',
+    behanceUrl: 'https://www.behance.net/gallery/244101671/Luca-Studio-Agencia-de-soluciones-digitales',
+  },
+  {
     id: 'pausa-activa',
     title: {
       es: 'Pausa Activa',
@@ -124,51 +169,6 @@ export const projects: Project[] = [
     },
     heroImageUrl: '/airbnb.jpeg',
     behanceUrl: 'https://www.behance.net/gallery/235867707/Clon-de-Airbnb',
-  },
-  {
-    id: 'te-visito',
-    title: {
-      es: 'Te Visito',
-      en: 'Te Visito',
-    },
-    category: {
-      es: 'App Móvil · Social UX',
-      en: 'Mobile App · Social UX',
-    },
-    year: '',
-    imageUrl: '/tevisito.jpeg',
-    description: {
-      es: 'App para conectar personas con servicios de confianza.',
-      en: 'App to connect people with trusted services.',
-    },
-    context: {
-      es: 'La soledad en adultos mayores es una problemática creciente. Te Visito busca facilitar la conexión social mediante un sistema seguro de voluntariado y acompañamiento.',
-      en: 'Loneliness in older adults is a growing problem. Te Visito seeks to facilitate social connection through a safe volunteering and companionship system.',
-    },
-    role: {
-      es: 'Lead Product Designer',
-      en: 'Lead Product Designer',
-    },
-    responsibilities: {
-      es: [
-        'Definición estratégica del producto',
-        'Entrevistas a profundidad con usuarios reales',
-        'Diseño de experiencia punta a punta (Service Design)',
-        'Diseño visual y sistema de componentes',
-      ],
-      en: [
-        'Strategic product definition',
-        'In-depth interviews with real users',
-        'End-to-end experience design (Service Design)',
-        'Visual design and component system',
-      ],
-    },
-    outcome: {
-      es: 'Un ecosistema digital empático que prioriza la seguridad y la facilidad de uso para todos los rangos etarios.',
-      en: 'An empathetic digital ecosystem that prioritizes safety and ease of use for all age groups.',
-    },
-    heroImageUrl: '/tevisito.jpeg',
-    behanceUrl: 'https://www.behance.net/gallery/227053151/Te-Visito',
   },
   {
     id: 'legere',

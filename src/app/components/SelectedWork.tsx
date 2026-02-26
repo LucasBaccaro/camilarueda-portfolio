@@ -13,7 +13,7 @@ export function SelectedWork({ language, onProjectClick }: SelectedWorkProps) {
   const t = translations[language];
 
   return (
-    <section id="work" className="min-h-screen bg-black py-32 px-6 md:px-16">
+    <section id="work" className="min-h-screen py-32 px-6 md:px-16" style={{ backgroundColor: '#000000' }}>
       <div className="max-w-[1600px] mx-auto">
         {/* Section Title */}
         <motion.div

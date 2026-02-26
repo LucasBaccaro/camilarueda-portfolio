@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import type { Language } from '@/app/data/translations';
 import { translations } from '@/app/data/translations';
-import gradientImage from '@/assets/bff8649efed96038e1f6339224d70791d09e859c.png';
+import { Flower } from '@/app/components/Flower';
 
 interface HeroProps {
   language: Language;
@@ -14,11 +14,7 @@ export function Hero({ language }: HeroProps) {
     <section
       id="hero"
       className="min-h-screen flex items-center justify-center relative overflow-hidden px-6 md:px-16 text-center"
-      style={{
-        backgroundImage: `url(${gradientImage})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
+      style={{ backgroundColor: '#000000' }}
     >
       <div className="relative z-10 text-center">
         <motion.div
@@ -27,7 +23,7 @@ export function Hero({ language }: HeroProps) {
           transition={{ duration: 1, ease: 'easeOut', delay: 0.2 }}
         >
           <h1
-            className="mb-6 tracking-tight text-black uppercase"
+            className="mb-6 tracking-tight text-white inline-flex items-center justify-center gap-3"
             style={{
               fontSize: 'clamp(48px, 8vw, 120px)',
               fontWeight: 400,
@@ -36,13 +32,16 @@ export function Hero({ language }: HeroProps) {
             }}
           >
             {t.hero.name}
+            <Flower size={22} color="white" />
           </h1>
           <p
-            className="text-black/80 tracking-tight"
+            className="tracking-tight"
             style={{
               fontSize: 'clamp(18px, 2.5vw, 32px)',
               fontWeight: 400,
               letterSpacing: '-0.02em',
+              fontFamily: 'Space Grotesk, sans-serif',
+              color: '#DDA7CB',
             }}
           >
             {t.hero.role}
@@ -56,7 +55,7 @@ export function Hero({ language }: HeroProps) {
           className="mt-12"
         >
           <p
-            className="text-black/70 tracking-tight"
+            className="text-white/70 tracking-tight"
             style={{
               fontSize: 'clamp(14px, 1.5vw, 18px)',
               fontWeight: 300,
@@ -76,12 +75,13 @@ export function Hero({ language }: HeroProps) {
         className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-3"
       >
         <p
-          className="text-black/60 tracking-tight"
+          className="tracking-tight"
           style={{
+            color: '#EBDECB',
             fontSize: '12px',
             fontWeight: 400,
             letterSpacing: '0.05em',
-            fontFamily: 'Archivo, sans-serif',
+            fontFamily: 'Space Grotesk, sans-serif',
             textTransform: 'uppercase',
           }}
         >
@@ -100,8 +100,8 @@ export function Hero({ language }: HeroProps) {
           >
             <path
               d="M10 5L10 15M10 15L14 11M10 15L6 11"
-              stroke="black"
-              strokeOpacity="0.6"
+              stroke="#EBDECB"
+              strokeOpacity="0.9"
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"

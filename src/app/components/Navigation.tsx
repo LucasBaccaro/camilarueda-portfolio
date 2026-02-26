@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import type { Language } from '@/app/data/translations';
 import { translations } from '@/app/data/translations';
 import { Menu, X, Globe } from 'lucide-react';
+import { Flower } from '@/app/components/Flower';
 
 interface NavigationProps {
   language: Language;
@@ -13,6 +14,7 @@ interface NavigationProps {
 
 export function Navigation({ language, onLanguageChange, onNavigate, currentSection }: NavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isLogoHovered, setIsLogoHovered] = useState(false);
   const t = translations[language];
 
   // Close mobile menu on resize
@@ -46,32 +48,34 @@ export function Navigation({ language, onLanguageChange, onNavigate, currentSect
           {/* Logo/Name */}
           <button
             onClick={() => onNavigate('hero')}
-            className="text-white tracking-tight transition-all hover:text-[#b19ef5] hover:font-semibold cursor-pointer"
-            style={{ fontSize: '15px', fontWeight: 500, letterSpacing: '-0.01em', fontFamily: 'Archivo, sans-serif', cursor: 'pointer' }}
+            onMouseEnter={() => setIsLogoHovered(true)}
+            onMouseLeave={() => setIsLogoHovered(false)}
+            className="tracking-tight transition-all cursor-pointer flex items-center"
+            style={{ fontSize: '15px', fontWeight: 500, letterSpacing: '-0.01em', fontFamily: 'Space Grotesk, sans-serif', color: isLogoHovered ? '#DDA7CB' : 'white' }}
           >
-            CR
+            CR<Flower size={9} color={isLogoHovered ? '#DDA7CB' : 'white'} />
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-12">
             <button
               onClick={() => onNavigate('work')}
-              className="text-white tracking-tight transition-all hover:text-[#b19ef5] hover:font-medium cursor-pointer"
-              style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '-0.01em', fontFamily: 'Archivo, sans-serif', cursor: 'pointer' }}
+              className="text-white tracking-tight transition-all hover:text-[#DDA7CB] hover:font-medium cursor-pointer"
+              style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '-0.01em', fontFamily: 'Space Grotesk, sans-serif', cursor: 'pointer' }}
             >
               {t.nav.work}
             </button>
             <button
               onClick={() => onNavigate('about')}
-              className="text-white tracking-tight transition-all hover:text-[#b19ef5] hover:font-medium cursor-pointer"
-              style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '-0.01em', fontFamily: 'Archivo, sans-serif', cursor: 'pointer' }}
+              className="text-white tracking-tight transition-all hover:text-[#DDA7CB] hover:font-medium cursor-pointer"
+              style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '-0.01em', fontFamily: 'Space Grotesk, sans-serif', cursor: 'pointer' }}
             >
               {t.nav.about}
             </button>
             <button
               onClick={() => onNavigate('contact')}
-              className="text-white tracking-tight transition-all hover:text-[#b19ef5] hover:font-medium cursor-pointer"
-              style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '-0.01em', fontFamily: 'Archivo, sans-serif', cursor: 'pointer' }}
+              className="text-white tracking-tight transition-all hover:text-[#DDA7CB] hover:font-medium cursor-pointer"
+              style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '-0.01em', fontFamily: 'Space Grotesk, sans-serif', cursor: 'pointer' }}
             >
               {t.nav.contact}
             </button>
