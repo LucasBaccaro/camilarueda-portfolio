@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import type { Project } from '@/app/data/projects';
 import type { Language } from '@/app/data/translations';
+import { CASE_STUDIES } from '@/app/components/caseStudies';
 
 interface ProjectCardProps {
   project: Project;
@@ -10,6 +11,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, language, onClick, index }: ProjectCardProps) {
+  const Cover = CASE_STUDIES[project.id]?.Cover;
+
   return (
     <motion.article
       initial={{ opacity: 0, y: 60 }}
@@ -22,13 +25,23 @@ export function ProjectCard({ project, language, onClick, index }: ProjectCardPr
       {/* Image Container */}
       <div className="relative mb-6" style={{ aspectRatio: '16/10' }}>
         <div className="w-full h-full overflow-hidden">
-          <motion.img
-            src={project.imageUrl}
-            alt={project.title[language]}
-            className="w-full h-full object-cover"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-          />
+          {Cover ? (
+            <motion.div
+              className="w-full h-full"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+            >
+              <Cover language={language} />
+            </motion.div>
+          ) : (
+            <motion.img
+              src={project.imageUrl}
+              alt={project.title[language]}
+              className="w-full h-full object-cover"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+            />
+          )}
         </div>
 
         {/* Overlay on hover */}

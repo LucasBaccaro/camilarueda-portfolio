@@ -2,15 +2,13 @@ import { motion } from 'motion/react';
 import type { Project } from '@/app/data/projects';
 import type { Language } from '@/app/data/translations';
 import { translations } from '@/app/data/translations';
-import { ArrowLeft } from 'lucide-react';
 
 interface ProjectDetailProps {
   project: Project;
   language: Language;
-  onClose: () => void;
 }
 
-export function ProjectDetail({ project, language, onClose }: ProjectDetailProps) {
+export function ProjectDetail({ project, language }: ProjectDetailProps) {
   const t = translations[language];
 
   return (
@@ -19,21 +17,8 @@ export function ProjectDetail({ project, language, onClose }: ProjectDetailProps
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.4 }}
-      className="min-h-screen bg-white"
+      className="min-h-screen bg-white pt-[73px]"
     >
-      {/* Fixed back button */}
-      <motion.button
-        initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        onClick={onClose}
-        className="fixed top-8 left-8 md:left-16 z-50 flex items-center gap-2 text-black hover:opacity-60 transition-opacity"
-        style={{ fontSize: '15px', fontWeight: 400, letterSpacing: '-0.01em' }}
-      >
-        <ArrowLeft size={18} />
-        {t.projectDetail.backToWork}
-      </motion.button>
-
       {/* Hero Image */}
       <motion.div
         initial={{ opacity: 0, scale: 1.1 }}

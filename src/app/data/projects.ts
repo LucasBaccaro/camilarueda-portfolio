@@ -31,10 +31,44 @@ export interface Project {
     en: string;
   };
   heroImageUrl: string;
-  behanceUrl: string;
+  behanceUrl?: string;
 }
 
 export const projects: Project[] = [
+  {
+    id: 'aura-weather',
+    title: {
+      es: 'Aura Weather',
+      en: 'Aura Weather',
+    },
+    category: {
+      es: 'Frontend React · Integración de API · UI',
+      en: 'React Frontend · API Integration · UI',
+    },
+    year: '2026',
+    imageUrl: '/aura-weather/soleado.jpeg',
+    description: {
+      es: 'App del clima en React conectada a la API de OpenWeatherMap, con una interfaz que cambia según el clima de cada búsqueda.',
+      en: 'React weather app connected to the OpenWeatherMap API, with an interface that changes with the weather of each search.',
+    },
+    context: {
+      es: 'Práctica de React e integración de API, con un diseño pensado para hacer visible la lógica.',
+      en: 'React and API integration practice, with a design meant to make the logic visible.',
+    },
+    role: {
+      es: 'Diseño y desarrollo frontend',
+      en: 'Design and frontend development',
+    },
+    responsibilities: {
+      es: ['Desarrollo en React', 'Integración con OpenWeatherMap', 'Diseño de interfaz y estados'],
+      en: ['React development', 'OpenWeatherMap integration', 'Interface and states design'],
+    },
+    outcome: {
+      es: 'Una app responsive que traduce datos del clima en estados visuales.',
+      en: 'A responsive app that turns weather data into visual states.',
+    },
+    heroImageUrl: '/aura-weather/soleado.jpeg',
+  },
   {
     id: 'luca-studio',
     title: {
