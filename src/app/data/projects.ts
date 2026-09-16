@@ -32,6 +32,8 @@ export interface Project {
   };
   heroImageUrl: string;
   behanceUrl?: string;
+  // Sitio o app publicada; se muestra como link en el caso de estudio
+  liveUrl?: string;
 }
 
 export const projects: Project[] = [
@@ -68,6 +70,42 @@ export const projects: Project[] = [
       en: 'A responsive app that turns weather data into visual states.',
     },
     heroImageUrl: '/aura-weather/soleado.jpeg',
+    liveUrl: 'https://aura-weather-murex.vercel.app/',
+  },
+  {
+    id: 'fernando-rueda',
+    title: {
+      es: 'Fernando Rueda',
+      en: 'Fernando Rueda',
+    },
+    category: {
+      es: 'UX/UI · Desarrollo web · Bilingüe',
+      en: 'UX/UI · Web development · Bilingual',
+    },
+    year: '2026',
+    imageUrl: '/fernando-rueda/hero.jpg',
+    description: {
+      es: 'Sitio personal de un director técnico de fútbol: una sola página, bilingüe, con su trayectoria y su forma de jugar.',
+      en: 'Personal site for a football coach: a single bilingual page with his career and his way of playing.',
+    },
+    context: {
+      es: 'Presentarse ante clubes y representantes sin depender de un CV en PDF.',
+      en: 'Introducing himself to clubs and agents without relying on a PDF CV.',
+    },
+    role: {
+      es: 'Diseño UX/UI y desarrollo web',
+      en: 'UX/UI design and web development',
+    },
+    responsibilities: {
+      es: ['Arquitectura de contenido', 'Diseño de interfaz', 'Desarrollo en HTML, CSS y JavaScript'],
+      en: ['Content architecture', 'Interface design', 'Development in HTML, CSS and JavaScript'],
+    },
+    outcome: {
+      es: 'Un sitio bilingüe que se actualiza cada vez que cambia de club.',
+      en: 'A bilingual site that gets updated every time he changes clubs.',
+    },
+    heroImageUrl: '/fernando-rueda/hero.jpg',
+    liveUrl: 'https://www.fernandoruedagarcia.com',
   },
   {
     id: 'luca-studio',
@@ -203,50 +241,5 @@ export const projects: Project[] = [
     },
     heroImageUrl: '/airbnb.jpeg',
     behanceUrl: 'https://www.behance.net/gallery/235867707/Clon-de-Airbnb',
-  },
-  {
-    id: 'legere',
-    title: {
-      es: 'Legere',
-      en: 'Legere',
-    },
-    category: {
-      es: 'E-commerce · UX Writing',
-      en: 'E-commerce · UX Writing',
-    },
-    year: '',
-    imageUrl: '/legere2.jpeg',
-    description: {
-      es: 'Diseño de una app para la compra y descarga de libros digitales.',
-      en: 'App design for digital book purchase and download.',
-    },
-    context: {
-      es: 'Legere nace para transformar la compra de libros online en una experiencia fluida y visualmente atractiva, integrando recomendaciones personalizadas.',
-      en: 'Legere was born to transform online book buying into a fluid and visually attractive experience, integrating personalized recommendations.',
-    },
-    role: {
-      es: 'UX/UI Designer',
-      en: 'UX/UI Designer',
-    },
-    responsibilities: {
-      es: [
-        'Research de mercado y competencia',
-        'Arquitectura de información compleja',
-        'Diseño de interfaz minimalista y funcional',
-        'Prototipado de alta fidelidad',
-      ],
-      en: [
-        'Market and competitive research',
-        'Complex information architecture',
-        'Minimalist and functional interface design',
-        'High-fidelity prototyping',
-      ],
-    },
-    outcome: {
-      es: 'Aumento significativo en el engagement de usuarios y una navegación fluida entre categorías y recomendaciones.',
-      en: 'Significant increase in user engagement and fluid navigation between categories and recommendations.',
-    },
-    heroImageUrl: '/legere2.jpeg',
-    behanceUrl: 'https://www.behance.net/gallery/218134191/Legere-UX-UI-Camila-Rueda',
   },
 ];

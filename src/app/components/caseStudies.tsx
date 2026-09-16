@@ -2,6 +2,8 @@ import type { ComponentType } from 'react';
 import type { Language } from '@/app/data/translations';
 import { AuraWeatherCase } from '@/app/components/aura/AuraWeatherCase';
 import { AuraWeatherCover } from '@/app/components/aura/AuraWeatherCover';
+import { FernandoRuedaCase } from '@/app/components/fernando/FernandoRuedaCase';
+import { FernandoRuedaCover } from '@/app/components/fernando/FernandoRuedaCover';
 
 interface CaseStudy {
   Page: ComponentType<{ language: Language }>;
@@ -12,4 +14,5 @@ interface CaseStudy {
 // Proyectos con caso de estudio propio; los demás abren Behance
 export const CASE_STUDIES: Record<string, CaseStudy> = {
   'aura-weather': { Page: AuraWeatherCase, Cover: AuraWeatherCover },
+  'fernando-rueda': { Page: FernandoRuedaCase, Cover: FernandoRuedaCover },
 };
