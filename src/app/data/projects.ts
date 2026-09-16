@@ -159,11 +159,11 @@ export const projects: Project[] = [
       en: 'Pausa Activa',
     },
     category: {
-      es: 'Mobile UX/UI · Wellness',
-      en: 'Mobile UX/UI · Wellness',
+      es: 'UX Research · UX/UI Mobile · Bienestar',
+      en: 'UX Research · Mobile UX/UI · Wellness',
     },
-    year: '',
-    imageUrl: '/pausa-activa.jpeg',
+    year: '2025',
+    imageUrl: '/pausa-activa/pantallas.jpg',
     description: {
       es: 'Diseño de una app para fomentar la actividad física recreativa.',
       en: 'App design to promote recreational physical activity.',
@@ -194,7 +194,8 @@ export const projects: Project[] = [
       es: 'Propuesta de diseño centrada en el bienestar, con una interfaz clara y motivadora para los usuarios.',
       en: 'Design proposal focused on wellbeing, with a clear and motivating interface for users.',
     },
-    heroImageUrl: '/pausa-activa.jpeg',
+    heroImageUrl: '/pausa-activa/pantallas.jpg',
+    liveUrl: 'https://www.figma.com/design/IJBdFiyDbyoEagbhkFWeeE/Pausa-activa-App?node-id=0-1',
     behanceUrl: 'https://www.behance.net/gallery/237381133/Pausa-Activa',
   },
   {
