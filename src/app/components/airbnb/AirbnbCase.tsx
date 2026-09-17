@@ -119,8 +119,13 @@ export function AirbnbCase({ language }: AirbnbCaseProps) {
       </Reveal>
 
       {/* 02 · Exploración */}
-      <Reveal className="bg-white p-8 md:p-12">
-        <TextBlock label={t.exploration.label}>{t.exploration.text}</TextBlock>
+      <Reveal className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="bg-white flex items-center p-8 md:p-12 min-h-[320px] order-2 sm:order-1">
+          <TextBlock label={t.exploration.label}>{t.exploration.text}</TextBlock>
+        </div>
+        <div className="bg-white aspect-[4/5] overflow-hidden flex items-center justify-center order-1 sm:order-2">
+          <img src={SCREENSHOTS[0].src} alt={SCREENSHOTS[0].alt} className="h-full w-auto max-w-none" loading="lazy" />
+        </div>
       </Reveal>
 
       {/* Paleta */}
