@@ -204,10 +204,10 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
         </div>
 
         {/* Paleta en franjas: el lima ocupa menos lugar porque es solo acento */}
-        <div className="px-8 md:px-12 mb-10 pt-10 border-t" style={{ borderColor: 'rgba(255, 255, 255, 0.08)' }}>
+        <div className="px-8 md:px-12 mb-10">
           <SectionLabel>{t.system.palette}</SectionLabel>
         </div>
-        <div className="grid grid-cols-[3fr_2fr_1.2fr_2fr_2fr] h-[180px] overflow-hidden">
+        <div className="grid grid-cols-[3fr_2fr_1.2fr_2fr_2fr] h-[180px] overflow-hidden border-t" style={{ borderColor: 'rgba(255, 255, 255, 0.08)' }}>
           {PALETTE.map((hex, index) => {
             const isLight = LIGHT_SWATCHES.includes(index);
 
