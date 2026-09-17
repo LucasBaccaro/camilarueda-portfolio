@@ -242,6 +242,7 @@ export const projects: Project[] = [
       en: 'Simplified flows and a more robust information architecture that improves simulated conversion rate.',
     },
     heroImageUrl: '/airbnb.jpeg',
+    liveUrl: 'https://www.figma.com/design/EC2ZLPnNmQRdttRziyKOxB/Airbnb',
     behanceUrl: 'https://www.behance.net/gallery/235867707/Clon-de-Airbnb',
   },
 ];

@@ -86,7 +86,7 @@ const SCREENSHOTS = [
   { src: '/airbnb/card-nantes.png', alt: 'Card de Nantes, Francia' },
 ];
 
-const LIVE_URL = projects.find((project) => project.id === 'airbnb-clon')?.behanceUrl;
+const LIVE_URL = projects.find((project) => project.id === 'airbnb-clon')?.liveUrl;
 
 export function AirbnbCase({ language }: AirbnbCaseProps) {
   const t = content[language];
