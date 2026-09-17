@@ -23,7 +23,7 @@ export function About({ language }: AboutProps) {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="flex-1"
+          className="flex-1 order-2 md:order-1"
         >
           <h2
             className="text-white mb-12 tracking-tight"
@@ -94,7 +94,7 @@ export function About({ language }: AboutProps) {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, ease: 'easeOut', delay: 0.2 }}
-          className="flex-shrink-0 relative"
+          className="flex-shrink-0 relative order-1 md:order-2"
           style={{ width: 'clamp(220px, 28vw, 360px)' }}
         >
           <div className="relative">
