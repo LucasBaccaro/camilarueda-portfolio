@@ -194,6 +194,10 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
         </div>
       </Reveal>
 
+      <Reveal className="flex flex-col items-center justify-center py-20 md:py-28 px-6" style={{ backgroundColor: LS_COLORS.black }}>
+        <LucaLogo color={LS_COLORS.white} lineColor={LS_COLORS.lime} size={1.4} />
+      </Reveal>
+
       {/* 03 · Sistema visual */}
       <Reveal style={{ backgroundColor: LS_COLORS.night }}>
         <div className="p-8 md:p-12">
