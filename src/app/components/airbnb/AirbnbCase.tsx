@@ -1,4 +1,4 @@
-import { CaseLayout, Reveal, SmallLabel, TextBlock } from '@/app/components/case/CaseLayout';
+import { CaseLayout, Reveal, TextBlock } from '@/app/components/case/CaseLayout';
 import { projects } from '@/app/data/projects';
 import type { Language } from '@/app/data/translations';
 
@@ -26,9 +26,9 @@ const content = {
       label: '02. Exploración',
       text: 'Se analizó la estructura de Airbnb: grid de tarjetas, componentes reutilizables, sistemas de navegación y filtros. Cada elemento fue replicado usando Auto Layout para que se adaptara automáticamente a cambios de contenido y tamaño.',
     },
-    palette: {
-      label: '03. Paleta de colores',
-      text: 'La paleta de Airbnb se basa en tonos cálidos y el icónico rojo rosa. Los colores neutros mantienen claridad en la información, mientras que el rojo destaca llamadas a la acción.',
+    structure: {
+      label: '03. Estructura',
+      text: 'La interfaz se compone de tarjetas con imágenes, datos de disponibilidad, precios y reviews. Se utilizó Auto Layout para que estos elementos se acomoden dinámicamente según el contenido, manteniendo coherencia visual en todos los tamaños.',
     },
     components: {
       label: '04. Componentes',
@@ -58,9 +58,9 @@ const content = {
       label: '02. Exploration',
       text: 'Airbnb structure was analyzed: card grids, reusable components, navigation systems and filters. Each element was replicated using Auto Layout to automatically adapt to content and size changes.',
     },
-    palette: {
-      label: '03. Color Palette',
-      text: 'The Airbnb palette is based on warm tones and the iconic red-pink. Neutral colors maintain clarity in information, while red highlights calls to action.',
+    structure: {
+      label: '03. Structure',
+      text: 'The interface consists of cards with images, availability data, prices and reviews. Auto Layout was used so these elements arrange dynamically according to content, maintaining visual coherence at all sizes.',
     },
     components: {
       label: '04. Components',
@@ -73,15 +73,7 @@ const content = {
   },
 } as const;
 
-const PALETTE = [
-  { hex: '#FF5A5F', dark: true, name: 'Rojo Airbnb' },
-  { hex: '#FFFFFF', dark: false, name: 'Blanco' },
-  { hex: '#F5F5F5', dark: false, name: 'Gris Claro' },
-  { hex: '#222222', dark: true, name: 'Gris Oscuro' },
-];
-
 const SCREENSHOTS = [
-  { src: '/airbnb/mockup.png', alt: 'Mockup de web y mobile' },
   { src: '/airbnb/wireframe.png', alt: 'Flujos y wireframes' },
   { src: '/airbnb/details.png', alt: 'Detalles de diseño' },
 ];
@@ -104,11 +96,11 @@ export function AirbnbCase({ language }: AirbnbCaseProps) {
       ]}
       link={{ label: t.linkLabel, href: LIVE_URL }}
       intro={
-        <div className="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[16/12]">
+        <div className="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[16/12] bg-white flex items-center justify-center">
           <img
             src={SCREENSHOTS[0].src}
             alt={SCREENSHOTS[0].alt}
-            className="w-full h-full object-cover"
+            className="max-w-full max-h-full object-contain"
             loading="lazy"
           />
         </div>
@@ -120,54 +112,23 @@ export function AirbnbCase({ language }: AirbnbCaseProps) {
       </Reveal>
 
       {/* 02 · Exploración */}
-      <Reveal className="grid grid-cols-1 sm:grid-cols-2">
-        <div className="bg-white flex items-center p-8 md:p-12 min-h-[320px] order-2 sm:order-1">
-          <TextBlock label={t.exploration.label}>{t.exploration.text}</TextBlock>
-        </div>
-        <div className="bg-white aspect-[4/5] overflow-hidden flex items-center justify-center order-1 sm:order-2">
-          <img src={SCREENSHOTS[1].src} alt={SCREENSHOTS[1].alt} className="h-full w-auto max-w-none" loading="lazy" />
-        </div>
+      <Reveal className="bg-white p-8 md:p-12">
+        <TextBlock label={t.exploration.label}>{t.exploration.text}</TextBlock>
       </Reveal>
 
-      {/* Paleta */}
-      <Reveal className="relative grid grid-cols-4">
-        <SmallLabel>
-          {language === 'es' ? 'PALETA' : 'PALETTE'}
-        </SmallLabel>
-        {PALETTE.map((color) => (
-          <div
-            key={color.hex}
-            className="aspect-[3/4] flex flex-col justify-end p-3 md:p-5"
-            style={{ backgroundColor: color.hex }}
-          >
-            <span className={color.dark ? 'text-white' : 'text-black/80'} style={{ fontSize: '14px' }}>
-              {language === 'es' ? (color.name === 'Rojo Airbnb' ? 'Rojo' : color.name === 'Blanco' ? 'Blanco' : color.name === 'Gris Claro' ? 'Gris Claro' : 'Gris Oscuro') : color.name}
-            </span>
-            <span className={color.dark ? 'text-white/60' : 'text-black/45'} style={{ fontSize: '11px', letterSpacing: '0.04em' }}>
-              {color.hex}
-            </span>
-          </div>
-        ))}
-      </Reveal>
-
-      {/* 03 · Paleta de colores */}
+      {/* 03 · Estructura */}
       <Reveal className="bg-[#F5F5F5] p-8 md:p-12">
-        <TextBlock label={t.palette.label}>{t.palette.text}</TextBlock>
+        <TextBlock label={t.structure.label}>{t.structure.text}</TextBlock>
       </Reveal>
 
       {/* Detalles de diseño */}
       <Reveal className="bg-white overflow-hidden">
-        <img src={SCREENSHOTS[2].src} alt={SCREENSHOTS[2].alt} className="w-full h-auto" loading="lazy" />
+        <img src={SCREENSHOTS[1].src} alt={SCREENSHOTS[1].alt} className="w-full h-auto" loading="lazy" />
       </Reveal>
 
       {/* 04 · Componentes */}
-      <Reveal className="bg-[#F5F5F5] p-8 md:p-12">
+      <Reveal className="bg-white p-8 md:p-12">
         <TextBlock label={t.components.label}>{t.components.text}</TextBlock>
-      </Reveal>
-
-      {/* Wireframes */}
-      <Reveal className="bg-white overflow-hidden">
-        <img src={SCREENSHOTS[1].src} alt={SCREENSHOTS[1].alt} className="w-full h-auto" loading="lazy" />
       </Reveal>
 
       {/* 05 · Aprendizajes */}
