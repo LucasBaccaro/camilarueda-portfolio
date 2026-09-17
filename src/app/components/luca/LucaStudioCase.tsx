@@ -310,7 +310,7 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
       </Reveal>
 
       {/* 05 · Mobile */}
-      <Reveal className="grid grid-cols-1 sm:grid-cols-2" style={{ backgroundColor: LS_COLORS.black }}>
+      <Reveal className="grid grid-cols-1 sm:grid-cols-2" style={{ backgroundColor: LS_COLORS.black, borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="flex items-center justify-center py-10 order-2 sm:order-1">
           <img src={LS_IMAGES.mobile} alt={t.mobile.mobileAlt} className="h-[420px] md:h-[520px] w-auto" loading="lazy" />
         </div>
