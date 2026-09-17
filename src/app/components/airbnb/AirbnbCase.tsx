@@ -86,8 +86,6 @@ const SCREENSHOTS = [
   { src: '/airbnb/card-nantes.png', alt: 'Card de Nantes, Francia' },
 ];
 
-const LIVE_URL = projects.find((project) => project.id === 'airbnb-clon')?.liveUrl;
-
 export function AirbnbCase({ language }: AirbnbCaseProps) {
   const t = content[language];
 
@@ -102,7 +100,6 @@ export function AirbnbCase({ language }: AirbnbCaseProps) {
         { label: t.stackLabel, values: ['Figma'] },
         { label: t.platformLabel, values: [t.platform] },
       ]}
-      link={{ label: t.linkLabel, href: LIVE_URL }}
       intro={
         <div className="aspect-[4/5] sm:aspect-[4/3] lg:aspect-[16/12]">
           <img
