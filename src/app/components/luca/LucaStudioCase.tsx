@@ -178,13 +178,15 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
       }
     >
       {/* 01 · Contexto */}
-      <Reveal className="bg-[#F1F2F4] p-8 md:p-12 min-h-[280px] flex items-center">
-        <TextBlock label={t.context.label}>{t.context.text}</TextBlock>
+      <Reveal className="p-8 md:p-12 min-h-[280px] flex items-center" style={{ backgroundColor: LS_COLORS.black }}>
+        <TextBlock label={t.context.label} dark>
+          {t.context.text}
+        </TextBlock>
       </Reveal>
 
       {/* 02 · Identidad visual */}
-      <Reveal className="p-8 md:p-12" style={{ backgroundColor: LS_COLORS.black }}>
-        <TextBlock label={t.identity.label} dark>
+      <Reveal className="bg-[#F1F2F4] p-8 md:p-12">
+        <TextBlock label={t.identity.label}>
           {t.identity.text}
         </TextBlock>
       </Reveal>
