@@ -209,21 +209,20 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
             <SectionLabel>{t.system.palette}</SectionLabel>
           </div>
           <div className="grid grid-cols-[3fr_2fr_1.2fr_2fr_2fr] h-[180px] overflow-hidden">
-          {PALETTE.map((hex, index) => {
-            const isLight = LIGHT_SWATCHES.includes(index);
+            {PALETTE.map((hex, index) => {
+              const isLight = LIGHT_SWATCHES.includes(index);
 
-            return (
-              <div key={hex} className="flex flex-col justify-end p-3 md:p-4 min-w-0" style={{ backgroundColor: hex }}>
-                <span className="truncate" style={{ fontSize: '12px', color: isLight ? '#000000' : LS_COLORS.text }}>
-                  {t.system.paletteNames[index]}
-                </span>
-                <span style={{ fontSize: '10px', letterSpacing: '0.04em', color: isLight ? 'rgba(0, 0, 0, 0.5)' : 'rgba(245, 245, 247, 0.45)' }}>
-                  {hex}
-                </span>
-              </div>
-            );
-          })}
-          </div>
+              return (
+                <div key={hex} className="flex flex-col justify-end p-3 md:p-4 min-w-0" style={{ backgroundColor: hex }}>
+                  <span className="truncate" style={{ fontSize: '12px', color: isLight ? '#000000' : LS_COLORS.text }}>
+                    {t.system.paletteNames[index]}
+                  </span>
+                  <span style={{ fontSize: '10px', letterSpacing: '0.04em', color: isLight ? 'rgba(0, 0, 0, 0.5)' : 'rgba(245, 245, 247, 0.45)' }}>
+                    {hex}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
 
