@@ -47,7 +47,7 @@ export function About({ language }: AboutProps) {
                 lineHeight: 1.75,
               }}
             >
-              Soy Camila, diseñadora UX/UI con base en Buenos Aires. Me gusta crear productos digitales claros, simples y lindos de usar, prestando atención tanto a la experiencia como a los detalles visuales.
+              {t.about.intro}
             </p>
 
             <p
@@ -59,7 +59,7 @@ export function About({ language }: AboutProps) {
                 lineHeight: 1.75,
               }}
             >
-              Trabajo en todo el proceso de diseño: desde pensar la estructura y los flujos hasta diseñar la interfaz final. Me interesa entender bien el problema antes de empezar a diseñar, y encontrar soluciones que equilibren lo funcional, lo estético y lo que necesita el negocio.
+              {t.about.paragraph1}
             </p>
 
             <p
@@ -71,7 +71,19 @@ export function About({ language }: AboutProps) {
                 lineHeight: 1.75,
               }}
             >
-              Disfruto trabajar en equipo, compartir ideas y construir productos que tengan impacto real. Hoy busco seguir creciendo como diseñadora y sumarme a proyectos desafiantes donde el diseño tenga un rol central.
+              {t.about.paragraph2}
+            </p>
+
+            <p
+              className="text-white/75 tracking-tight"
+              style={{
+                fontSize: 'clamp(15px, 1.6vw, 19px)',
+                fontWeight: 300,
+                letterSpacing: '-0.01em',
+                lineHeight: 1.75,
+              }}
+            >
+              {t.about.paragraph3}
             </p>
           </div>
         </motion.div>

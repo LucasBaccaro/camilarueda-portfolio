@@ -17,13 +17,13 @@ export const translations = {
     },
     about: {
       title: 'Sobre mí',
-      intro: 'Soy Camila Rueda, diseñadora UX/UI enfocada en crear experiencias digitales claras, funcionales y centradas en las personas.',
+      intro: 'Soy Camila, diseñadora UX/UI y desarrolladora frontend con base en Buenos Aires. Me encanta llevar productos de la idea a la realidad: diseñar en Figma e implementar en código.',
       paragraph1:
-        'Diseño interfaces y productos digitales combinando necesidades de usuario, objetivos de negocio y criterio visual. Me interesa especialmente trabajar en soluciones escalables, donde la estrategia, la usabilidad y el diseño se integran de manera coherente.',
+        'Trabajo en todo el proceso: investigación, wireframing, prototipado en Figma y desarrollo. Me interesa entender bien el problema antes de empezar a diseñar, y encontrar soluciones que equilibren lo funcional, lo estético y lo que necesita el negocio.',
       paragraph2:
-        'A lo largo de mi recorrido profesional participé en proyectos digitales de distintos contextos, lo que fortaleció mi disciplina de trabajo, mi capacidad de aprendizaje rápido y un enfoque analítico para resolver problemas complejos y transformarlos en experiencias simples e intuitivas. Trabajo en las distintas etapas del proceso de diseño, desde la definición de flujos hasta el diseño de interfaces y la entrega final.',
+        'Disfruto trabajar en equipo, compartir ideas y construir productos que tengan impacto real.',
       paragraph3:
-        'Actualmente busco seguir creciendo como diseñadora UX/UI y colaborar en equipos multidisciplinarios en el desarrollo de productos digitales con impacto real.',
+        'Hoy busco seguir creciendo en proyectos desafiantes donde el diseño y el desarrollo tengan un rol central.',
     },
     contact: {
       title: 'Contacto',
@@ -58,10 +58,10 @@ export const translations = {
     },
     about: {
       title: 'About',
-      intro: 'I\'m a UX/UI Designer specialized in digital product design, focused on functional interfaces, coherent visual systems, and user-centered experiences.',
-      paragraph1: 'My approach combines strategic thinking, visual sensibility, and technical execution. I work from research and problem definition to interface design, prototyping, and collaboration with development.',
-      paragraph2: 'I\'ve worked in multidisciplinary teams designing real digital products in business contexts, prioritizing clarity, usability, and scalability.',
-      paragraph3: 'My goal is to create solutions that work, that are understandable, and that provide value to both users and product teams.',
+      intro: 'I\'m Camila, a UX/UI designer and frontend developer based in Buenos Aires. I love taking products from idea to reality: designing in Figma and implementing in code.',
+      paragraph1: 'I work across the entire process: research, wireframing, prototyping in Figma and development. I believe in understanding the problem well before starting to design, and finding solutions that balance functionality, aesthetics, and business needs.',
+      paragraph2: 'I enjoy working in teams, sharing ideas, and building products that have real impact.',
+      paragraph3: 'Today I\'m looking to keep growing on challenging projects where design and development play a central role.',
     },
     contact: {
       title: 'Contact',
