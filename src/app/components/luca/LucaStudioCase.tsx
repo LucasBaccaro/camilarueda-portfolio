@@ -183,30 +183,15 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
       </Reveal>
 
       {/* 02 · Identidad visual */}
-      <Reveal className="p-8 md:p-12" style={{ backgroundColor: LS_COLORS.black }}>
-        <TextBlock label={t.identity.label} dark>
-          {t.identity.text}
-        </TextBlock>
-      </Reveal>
-
-      <Reveal className="grid grid-cols-3">
-        {[
-          { bg: LS_COLORS.night, color: LS_COLORS.white, line: LS_COLORS.lime },
-          { bg: LS_COLORS.lime, color: LS_COLORS.black, line: LS_COLORS.black },
-          { bg: LS_COLORS.beige, color: LS_COLORS.black, line: LS_COLORS.lime },
-        ].map((version, index) => (
-          <div key={version.bg} className="relative aspect-square flex items-center justify-center" style={{ backgroundColor: version.bg }}>
-            <div className="scale-[0.45] sm:scale-[0.6] md:scale-75">
-              <LucaLogo color={version.color} lineColor={version.line} />
-            </div>
-            <span
-              className="absolute bottom-3 left-3"
-              style={{ fontSize: '11px', color: index === 0 ? 'rgba(245, 245, 247, 0.5)' : 'rgba(0, 0, 0, 0.5)' }}
-            >
-              {t.identity.versions[index]}
-            </span>
-          </div>
-        ))}
+      <Reveal className="grid grid-cols-1 sm:grid-cols-2" style={{ backgroundColor: LS_COLORS.black }}>
+        <div className="p-8 md:p-12 flex items-center">
+          <TextBlock label={t.identity.label} dark>
+            {t.identity.text}
+          </TextBlock>
+        </div>
+        <div className="aspect-square overflow-hidden flex items-center justify-center">
+          <img src={LS_IMAGES.cards} alt={t.cardsAlt} className="w-full h-full object-cover" />
+        </div>
       </Reveal>
 
       {/* 03 · Sistema visual */}
