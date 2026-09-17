@@ -83,6 +83,7 @@ const PALETTE = [
 const SCREENSHOTS = [
   { src: '/airbnb/mockup.png', alt: 'Mockup de web y mobile' },
   { src: '/airbnb/wireframe.png', alt: 'Flujos y wireframes' },
+  { src: '/airbnb/card-nantes.png', alt: 'Card de Nantes, Francia' },
 ];
 
 const LIVE_URL = projects.find((project) => project.id === 'airbnb-clon')?.behanceUrl;
@@ -124,7 +125,7 @@ export function AirbnbCase({ language }: AirbnbCaseProps) {
           <TextBlock label={t.exploration.label}>{t.exploration.text}</TextBlock>
         </div>
         <div className="bg-white aspect-[4/5] overflow-hidden flex items-center justify-center order-1 sm:order-2">
-          <img src={SCREENSHOTS[1].src} alt={SCREENSHOTS[1].alt} className="h-full w-auto max-w-none" loading="lazy" />
+          <img src={SCREENSHOTS[2].src} alt={SCREENSHOTS[2].alt} className="h-full w-auto max-w-none" loading="lazy" />
         </div>
       </Reveal>
 
