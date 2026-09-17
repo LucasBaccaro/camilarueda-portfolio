@@ -114,14 +114,14 @@ export const projects: Project[] = [
       en: 'Luca Studio',
     },
     category: {
-      es: 'Branding · UX/UI · Agencia Digital',
-      en: 'Branding · UX/UI · Digital Agency',
+      es: 'Identidad visual · Diseño web · Estudio de software',
+      en: 'Visual identity · Web design · Software studio',
     },
-    year: '',
+    year: '2026',
     imageUrl: '/luca-studio.jpg',
     description: {
-      es: 'Diseño de identidad y experiencia digital para una agencia de soluciones digitales.',
-      en: 'Identity and digital experience design for a digital solutions agency.',
+      es: 'Identidad visual y sitio web para un estudio de software.',
+      en: 'Visual identity and website for a software studio.',
     },
     context: {
       es: 'Luca Studio es una agencia de soluciones digitales que necesitaba una identidad visual sólida y una experiencia de usuario coherente para comunicar su propuesta de valor de forma clara y profesional.',
@@ -150,6 +150,7 @@ export const projects: Project[] = [
       en: 'A coherent digital identity and interface that reflects the agency\'s values, improving their online presence and brand perception.',
     },
     heroImageUrl: '/luca-studio.jpg',
+    liveUrl: 'https://www.lucastudio.tech',
     behanceUrl: 'https://www.behance.net/gallery/244101671/Luca-Studio-Agencia-de-soluciones-digitales',
   },
   {
