@@ -196,7 +196,7 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
       </Reveal>
 
       {/* 03 · Sistema visual */}
-      <Reveal style={{ backgroundColor: LS_COLORS.night }}>
+      <Reveal style={{ backgroundColor: LS_COLORS.night, borderBottom: '1px solid rgba(255, 255, 255, 0.08)' }}>
         <div className="p-8 md:p-12">
           <TextBlock label={t.system.label} dark>
             {t.system.text}
@@ -224,7 +224,7 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
           })}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 border-t min-h-[400px]" style={{ borderColor: 'rgba(255, 255, 255, 0.08)' }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 border-t" style={{ borderColor: 'rgba(255, 255, 255, 0.08)' }}>
           {/* Tipografía */}
           <div className="p-8 md:p-12 sm:border-r" style={{ backgroundColor: LS_COLORS.black, borderColor: 'rgba(255, 255, 255, 0.08)' }}>
             <SectionLabel>{t.system.typography}</SectionLabel>
