@@ -7,7 +7,7 @@ export const translations = {
     },
     hero: {
       name: 'Camila Rueda',
-      role: 'Diseñadora UX/UI',
+      role: 'Diseñadora UX/UI & Desarrolladora Frontend',
       specialties: '',
       scroll: 'Scroll para explorar',
     },
@@ -48,7 +48,7 @@ export const translations = {
     },
     hero: {
       name: 'Camila Rueda',
-      role: 'UX/UI Designer',
+      role: 'UX/UI Designer & Frontend Developer',
       specialties: '',
       scroll: 'Scroll to explore',
     },
