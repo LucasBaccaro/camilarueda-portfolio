@@ -183,15 +183,10 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
       </Reveal>
 
       {/* 02 · Identidad visual */}
-      <Reveal className="grid grid-cols-1 sm:grid-cols-2" style={{ backgroundColor: LS_COLORS.black }}>
-        <div className="p-8 md:p-12 flex items-center">
-          <TextBlock label={t.identity.label} dark>
-            {t.identity.text}
-          </TextBlock>
-        </div>
-        <div className="aspect-square overflow-hidden flex items-center justify-center">
-          <img src={LS_IMAGES.cards} alt={t.cardsAlt} className="w-full h-full object-cover" />
-        </div>
+      <Reveal className="p-8 md:p-12" style={{ backgroundColor: LS_COLORS.black }}>
+        <TextBlock label={t.identity.label} dark>
+          {t.identity.text}
+        </TextBlock>
       </Reveal>
 
       <Reveal className="flex flex-col items-center justify-center py-20 md:py-28 px-6" style={{ backgroundColor: LS_COLORS.black }}>
@@ -229,7 +224,7 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 border-t" style={{ borderColor: 'rgba(255, 255, 255, 0.08)' }}>
           {/* Tipografía */}
-          <div className="p-8 md:p-12 sm:border-r" style={{ borderColor: 'rgba(255, 255, 255, 0.08)' }}>
+          <div className="p-8 md:p-12 sm:border-r" style={{ backgroundColor: '#F1F2F4', borderColor: 'rgba(0, 0, 0, 0.08)' }}>
             <SectionLabel>{t.system.typography}</SectionLabel>
             <div className="flex items-baseline gap-4">
               <span style={{ fontFamily: PLAYFAIR, fontSize: '64px', fontWeight: 600, lineHeight: 1, color: LS_COLORS.white }}>Aa</span>
