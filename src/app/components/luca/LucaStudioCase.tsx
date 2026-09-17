@@ -204,7 +204,7 @@ export function LucaStudioCase({ language }: LucaStudioCaseProps) {
         </div>
 
         {/* Paleta en franjas: el lima ocupa menos lugar porque es solo acento */}
-        <div className="border-t" style={{ borderColor: 'rgba(255, 255, 255, 0.08)' }}>
+        <div className="border-t" style={{ borderColor: 'rgba(255, 255, 255, 0.08)', backgroundColor: LS_COLORS.black }}>
           <div className="px-8 md:px-12 pt-8 pb-4">
             <SectionLabel>{t.system.palette}</SectionLabel>
           </div>
