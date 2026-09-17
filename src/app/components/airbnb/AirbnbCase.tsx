@@ -1,4 +1,4 @@
-import { CaseLayout, Reveal, TextBlock } from '@/app/components/case/CaseLayout';
+import { CaseLayout, Reveal, SmallLabel, TextBlock } from '@/app/components/case/CaseLayout';
 import { projects } from '@/app/data/projects';
 import type { Language } from '@/app/data/translations';
 
@@ -26,12 +26,16 @@ const content = {
       label: '02. Exploración',
       text: 'Se analizó la estructura de Airbnb: grid de tarjetas, componentes reutilizables, sistemas de navegación y filtros. Cada elemento fue replicado usando Auto Layout para que se adaptara automáticamente a cambios de contenido y tamaño.',
     },
+    palette: {
+      label: '03. Paleta de colores',
+      text: 'La paleta de Airbnb se basa en tonos cálidos y el icónico rojo rosa. Los colores neutros mantienen claridad en la información, mientras que el rojo destaca llamadas a la acción.',
+    },
     components: {
-      label: '03. Componentes',
+      label: '04. Componentes',
       text: 'Botones, tarjetas, inputs, badges y navegación. Todos construidos con Auto Layout para garantizar que se escalen correctamente sin necesidad de ajustes manuales.',
     },
     learnings: {
-      label: '04. Aprendizajes',
+      label: '05. Aprendizajes',
       text: 'El dominio de Auto Layout resultó clave para crear un sistema flexible. Aprendí cómo manejar espaciado responsivo, alineación y cómo los componentes padre se adaptan al contenido hijo.',
     },
   },
@@ -54,21 +58,31 @@ const content = {
       label: '02. Exploration',
       text: 'Airbnb structure was analyzed: card grids, reusable components, navigation systems and filters. Each element was replicated using Auto Layout to automatically adapt to content and size changes.',
     },
+    palette: {
+      label: '03. Color Palette',
+      text: 'The Airbnb palette is based on warm tones and the iconic red-pink. Neutral colors maintain clarity in information, while red highlights calls to action.',
+    },
     components: {
-      label: '03. Components',
+      label: '04. Components',
       text: 'Buttons, cards, inputs, badges and navigation. All built with Auto Layout to ensure they scale correctly without manual adjustments.',
     },
     learnings: {
-      label: '04. Learnings',
+      label: '05. Learnings',
       text: 'Mastering Auto Layout proved key to creating a flexible system. I learned how to handle responsive spacing, alignment, and how parent components adapt to child content.',
     },
   },
 } as const;
 
+const PALETTE = [
+  { hex: '#FF5A5F', dark: true, name: 'Rojo Airbnb' },
+  { hex: '#FFFFFF', dark: false, name: 'Blanco' },
+  { hex: '#F5F5F5', dark: false, name: 'Gris Claro' },
+  { hex: '#222222', dark: true, name: 'Gris Oscuro' },
+];
+
 const SCREENSHOTS = [
   { src: '/airbnb/mockup.png', alt: 'Mockup de web y mobile' },
   { src: '/airbnb/wireframe.png', alt: 'Flujos y wireframes' },
-  { src: '/airbnb/details.png', alt: 'Detalles de diseño' },
 ];
 
 const LIVE_URL = projects.find((project) => project.id === 'airbnb-clon')?.behanceUrl;
@@ -109,14 +123,40 @@ export function AirbnbCase({ language }: AirbnbCaseProps) {
         <TextBlock label={t.exploration.label}>{t.exploration.text}</TextBlock>
       </Reveal>
 
-      {/* Detalles de diseño */}
-      <Reveal className="bg-white overflow-hidden">
-        <img src={SCREENSHOTS[2].src} alt={SCREENSHOTS[2].alt} className="w-full h-auto" loading="lazy" />
+      {/* Paleta */}
+      <Reveal className="relative grid grid-cols-4">
+        <SmallLabel>
+          {language === 'es' ? 'PALETA' : 'PALETTE'}
+        </SmallLabel>
+        {PALETTE.map((color) => (
+          <div
+            key={color.hex}
+            className="aspect-[3/4] flex flex-col justify-end p-3 md:p-5"
+            style={{ backgroundColor: color.hex }}
+          >
+            <span className={color.dark ? 'text-white' : 'text-black/80'} style={{ fontSize: '14px' }}>
+              {language === 'es' ? (color.name === 'Rojo Airbnb' ? 'Rojo' : color.name === 'Blanco' ? 'Blanco' : color.name === 'Gris Claro' ? 'Gris Claro' : 'Gris Oscuro') : color.name}
+            </span>
+            <span className={color.dark ? 'text-white/60' : 'text-black/45'} style={{ fontSize: '11px', letterSpacing: '0.04em' }}>
+              {color.hex}
+            </span>
+          </div>
+        ))}
+      </Reveal>
+
+      {/* 03 · Paleta de colores */}
+      <Reveal className="bg-[#F5F5F5] p-8 md:p-12">
+        <TextBlock label={t.palette.label}>{t.palette.text}</TextBlock>
       </Reveal>
 
       {/* 04 · Componentes */}
       <Reveal className="bg-white p-8 md:p-12">
         <TextBlock label={t.components.label}>{t.components.text}</TextBlock>
+      </Reveal>
+
+      {/* Wireframes */}
+      <Reveal className="bg-white overflow-hidden">
+        <img src={SCREENSHOTS[1].src} alt={SCREENSHOTS[1].alt} className="w-full h-auto" loading="lazy" />
       </Reveal>
 
       {/* 05 · Aprendizajes */}
