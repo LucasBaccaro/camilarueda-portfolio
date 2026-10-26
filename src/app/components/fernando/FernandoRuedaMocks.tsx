@@ -220,7 +220,7 @@ const CAREER: CareerEntry[] = [
   {
     id: 'berane',
     crest: '/fernando-rueda/escudos/berane.png',
-    shortName: 'FK Berane',
+    shortName: 'Berane FK',
     fullName: 'FK Berane',
     years: { es: '2026–Presente', en: '2026–Present' },
     role: { es: 'Entrenador', en: 'Coach' },
