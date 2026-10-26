@@ -1,14 +1,14 @@
 .fr-timeline-scroll {
   color-scheme: dark;
-  scrollbar-width: thin;
-  scrollbar-color: #c9a84c rgba(240, 237, 232, 0.08);
 }
 
 .fr-timeline-scroll::-webkit-scrollbar {
   height: 3px;
 }
 
-.fr-timeline-scroll::-webkit-scrollbar-button {
+.fr-timeline-scroll::-webkit-scrollbar-button,
+.fr-timeline-scroll::-webkit-scrollbar-button:horizontal:decrement,
+.fr-timeline-scroll::-webkit-scrollbar-button:horizontal:increment {
   display: none;
   width: 0;
   height: 0;
