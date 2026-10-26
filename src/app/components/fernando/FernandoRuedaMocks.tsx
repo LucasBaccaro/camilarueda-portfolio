@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Language } from '@/app/data/translations';
+import './fernando-timeline.css';
 
 // Tokens del sitio del entrenador (assets/css/base/variables.css)
 export const FR_COLORS = {
@@ -258,7 +259,7 @@ export function FernandoTimeline({ language }: { language: Language }) {
   return (
     <div>
       {/* Horizontal en escritorio (con scroll si no entra), vertical en mobile */}
-      <div className="sm:overflow-x-auto sm:pb-2">
+      <div className="fr-timeline-scroll sm:overflow-x-auto sm:pb-3">
         <ol className="flex flex-col sm:flex-row sm:items-start sm:min-w-max">
           {CAREER.map((entry, index) => {
             const isActive = entry.id === activeId;

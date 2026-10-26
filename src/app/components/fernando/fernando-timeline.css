@@ -1,0 +1,26 @@
+.fr-timeline-scroll {
+  color-scheme: dark;
+  scrollbar-width: thin;
+  scrollbar-color: #c9a84c rgba(240, 237, 232, 0.08);
+}
+
+.fr-timeline-scroll::-webkit-scrollbar {
+  height: 3px;
+}
+
+.fr-timeline-scroll::-webkit-scrollbar-track {
+  background: rgba(240, 237, 232, 0.08);
+  border-radius: 2px;
+}
+
+.fr-timeline-scroll::-webkit-scrollbar-thumb {
+  background: #c9a84c;
+  border-radius: 2px;
+}
+
+@media (min-width: 640px) {
+  .fr-timeline-scroll {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+    mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+  }
+}
